@@ -17,6 +17,6 @@ def about_view(request, *args, **kwargs):
     return render(request, "about.html", {})
 
 def social_view(request, *args, **kwargs):
-    return HttpResponse("<h1>Social Page</h1>")
+    return HttpResponse("<h1>This is Social Page</h1>")
 
     
