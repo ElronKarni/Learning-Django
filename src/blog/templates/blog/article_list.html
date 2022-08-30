@@ -1,7 +1,0 @@
-{% extends "base.html" %} {% block content %}
-<form method="POST">{% csrf_token %}
-  {% for instance in object_list %}
-    <p>{{ instance.title }} - {{ instance.content }} - {{instance.active}}</p>
-  {% endfor %}
-</form>
-{% endblock %}

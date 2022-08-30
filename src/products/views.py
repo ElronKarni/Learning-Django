@@ -15,14 +15,6 @@ def product_list_view(request):
 
 
 
-
-
-
-
-
-
-
-
 # def product_create_view(request):
 #     my_form = RawProductForm()
 #     if request.method == 'POST':

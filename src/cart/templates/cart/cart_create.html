@@ -1,0 +1,18 @@
+{% block content %}
+<form method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save"/>
+</form>
+
+
+{% for instance in cart_list %}
+<ul>
+    <li>
+        <h1>{{instance.item_name}}</h1>
+    </li>
+    <h3>{{instance.item_description}}</h3>
+    <h4>price - {{instance.item_price}}</h4>
+    
+</ul>
+{% endfor %}
+{% endblock %}

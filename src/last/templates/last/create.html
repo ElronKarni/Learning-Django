@@ -1,0 +1,13 @@
+<form method='POST'>{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save"/>
+    {% for instance in object_list %}
+    <ul>
+        <li>
+            <h1>{{instance.title}}</h1>
+            <h2>{{instance.description}}</h2>
+            <h3>{{instance.price}}</h3>
+        </li>
+    </ul>
+    {% endfor %} 
+</form>

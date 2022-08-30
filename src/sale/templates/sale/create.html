@@ -1,0 +1,16 @@
+
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save"/>
+
+    {% for instance in sale_list %}
+    <ul>
+        <li>
+            <h1>{{instance.product_name}}</h1>
+        </li>
+        <h2>{{instance.product_discount}} Discount</h2>
+        <h3>Price-{{instance.product_price}}$</h3>
+    </ul>
+    
+    {% endfor %}
+</form>
